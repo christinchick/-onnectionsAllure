@@ -1,6 +1,10 @@
 package homeWorkAllure;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Link;
+import io.qameta.allure.Owner;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.withText;
@@ -16,6 +20,10 @@ public class LambdaStepsTest {
     public static final int NUMBER = 51;
 
     @Test
+    @Owner("christinchcik")
+    @Feature("Issues")
+    @DisplayName("Проверка Issue для авторизованного пользователя")
+    @Link(value = "GitHub", url = "https://github.com")
     public void lambdaStepTest() {
         step("Открываем главную страницу", () -> {
             open("https://github.com");
